@@ -1,6 +1,391 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 html {
   background-color: #fbf7f0;
 }
 
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*MOBIL*/
+
+header {
+  display: flex;
+  justify-content: space-between; /* Placerer logo og menu på hver sin side */
+  align-items: center;
+  padding: 20px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 15px;
+  display: none;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+  width: 20px;
+  align-self: flex-end;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #5c4033;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: 0.2s linear;
+}
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+  transition: 0.2s linear;
+}
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.2s linear;
+}
+nav.active .menu {
+  display: block;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav.active .menu li {
+  margin: 10px 20px;
+}
+nav.active .menu a {
+  font-size: 20px;
+  color: #f2a4e5;
+  font-family: "roboto";
+}
+
+.logo {
+  font-family: "dancing script";
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.logo a {
+  color: #5c4033;
+}
+
+.bjerg {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 100px;
+}
+
+h1 {
+  font-family: "raleway";
+  font-size: 60px;
+  font-weight: 400;
+  color: #f2a4e5;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-family: "raleway";
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
+}
+
+h3 {
+  display: none;
+}
+
+p {
+  font-family: "roboto";
+  font-size: 15px;
+  font-weight: 300;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+p div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.knap {
+  font-family: "roboto";
+  font-size: 15px;
+  font-weight: 300;
+  display: flex;
+  padding: 5px;
+  border-radius: 7px;
+  width: 12%;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffbe44;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.knap a {
+  text-decoration: none;
+  color: black;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 80px;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+.box {
+  padding: 60px;
+  background-color: #5c4033;
+  border-radius: 30px;
+  aspect-ratio: 1/1;
+  max-width: 1200px;
+}
+
+.box a {
+  text-decoration: none;
+  color: #5c4033;
+}
+
+.box h2 {
+  color: #fbf7f0;
+  text-align: center;
+}
+
+.button {
+  font-family: "roboto";
+  font-size: 15px;
+  font-weight: 300;
+  display: flex;
+  padding: 5px;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffbe44;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.grid_1-1 img {
+  object-fit: cover;
+  object-position: top center;
+  width: 50%;
+  aspect-ratio: 1/1;
+}
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid_2-1 img {
+  flex-direction: column; /* Placerer billederne under teksten */
+  align-items: center;
+  width: 50%; /* Billedet fylder 80% af bredden på mobil */
+  margin: 0 auto; /* Centrerer billedet */
+}
+
+.mig {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.billede_2 {
+  display: flex; /* Brug Flexbox for at arrangere billederne horisontalt */
+  justify-content: space-between; /* Placer billederne med lige afstand imellem */
+  gap: 5px; /* Afstand mellem billederne */
+}
+
+.billede_2 img {
+  width: 50%; /* Sæt billedernes bredde til 48% af containerens bredde */
+  height: auto; /* Bevar proportionerne af billederne */
+}
+
+.grid_3 {
+  display: flex; /* Brug Flexbox for at arrangere billederne horisontalt */
+  gap: 10px; /* Afstand mellem billederne */
+  width: 100%; /* Sørg for, at containeren fylder hele bredden */
+}
+
+.grid_3 img {
+  width: 32%; /* Gør billederne til at fylde 32% af containerens bredde */
+  height: auto; /* Bevar billedets proportioner */
+  object-fit: contain; /* Sørger for at billederne fylder containeren uden at blive beskåret */
+}
+
+.gul_box {
+  background-color: #ffbe44;
+  margin-bottom: 30px;
+}
+
+.gul_box p {
+  text-align: center;
+}
+
+.gul_box h2 {
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.lodret {
+  display: none;
+}
+
+.billeder_4 {
+  display: flex;
+  flex-wrap: wrap; /* Tillader billederne at bryde linjen */
+  justify-content: space-evenly; /* Jævnt fordelt billeder */
+  gap: 10px; /* Afstand mellem billederne */
+}
+
+.billeder_4 img {
+  width: 45%; /* Billederne fylder 45% af containerens bredde */
+  height: auto; /* Beholder billedets proportioner */
+  object-fit: contain;
+}
+
+/*DESKTOP*/
+
 @media (min-width: 850px) {
+  p {
+    line-height: 1.8;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+
+  .menu a {
+    color: black;
+    padding: 15px;
+    font-family: "roboto";
+  }
+
+  .menu a:hover {
+    color: #ffbe44;
+  }
+
+  .layout {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .grid_1-1 img {
+    width: 100%;
+  }
+
+  .grid_1-1 p {
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .grid_2-1 img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .billede_2 {
+    display: flex; /* Brug Flexbox for at arrangere billederne horisontalt */
+    justify-content: space-between; /* Placer billederne med lige afstand imellem */
+    gap: 10px; /* Afstand mellem billederne */
+  }
+
+  .billede_2 img {
+    width: 50%; /* Sæt billedernes bredde til 48% af containerens bredde */
+    height: auto; /* Bevar proportionerne af billederne */
+  }
+
+  .lodret {
+    font-family: "dancing script";
+    writing-mode: vertical-rl; /* Ændrer tekstretningen til lodret fra højre mod venstre */
+    transform: rotate(180deg); /* Roterer teksten for at gøre den læselig fra top til bund */
+    font-size: 1.5rem;
+    color: #5c4033; /* Juster tekststørrelse */
+    padding: 20px;
+    position: absolute; /* Placering af teksten */
+    left: 80px; /* Juster tekstens placering fra venstre kant */
+    top: 50%; /* Placerer teksten centralt i forhold til højden */
+    transform-origin: top left; /* Sørger for at rotationen starter fra toppen til venstre */
+    white-space: nowrap;
+    display: flex; /* Brug flexbox til at organisere teksten */
+    flex-direction: column; /* Placer tekstlinjerne vertikalt */
+    align-items: flex-start;
+  }
+
+  .gul_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+  }
+
+  .knap {
+    margin-bottom: 40px;
+  }
+
+  .bjerg {
+    width: 100%; /* Start med fuld bredde */
+    height: auto; /* Behold proportionaliteten */
+    display: block; /* Sørger for at billedet opfører sig som en blok */
+    margin: 0 auto; /* Centrerer billedet horisontalt */
+    transform: scale(1.2); /* Gør billedet 120% af sin oprindelige størrelse */
+    transform-origin: center;
+    margin-top: 80px;
+  }
 }
