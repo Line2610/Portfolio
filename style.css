@@ -226,7 +226,7 @@ p div {
 .grid_2-1 img {
   flex-direction: column; /* Placerer billederne under teksten */
   align-items: center;
-  width: 50%; /* Billedet fylder 80% af bredden på mobil */
+  width: 50%;
   margin: 0 auto; /* Centrerer billedet */
 }
 
@@ -238,25 +238,25 @@ p div {
 }
 
 .billede_2 {
-  display: flex; /* Brug Flexbox for at arrangere billederne horisontalt */
-  justify-content: space-between; /* Placer billederne med lige afstand imellem */
-  gap: 5px; /* Afstand mellem billederne */
+  display: flex; /* Gør billederne horisontalt */
+  justify-content: space-between;
+  gap: 5px;
 }
 
 .billede_2 img {
-  width: 50%; /* Sæt billedernes bredde til 48% af containerens bredde */
+  width: 50%;
   height: auto; /* Bevar proportionerne af billederne */
 }
 
 .grid_3 {
-  display: flex; /* Brug Flexbox for at arrangere billederne horisontalt */
-  gap: 10px; /* Afstand mellem billederne */
-  width: 100%; /* Sørg for, at containeren fylder hele bredden */
+  display: flex;
+  gap: 10px;
+  width: 100%;
 }
 
 .grid_3 img {
-  width: 32%; /* Gør billederne til at fylde 32% af containerens bredde */
-  height: auto; /* Bevar billedets proportioner */
+  width: 32%;
+  height: auto;
   object-fit: contain; /* Sørger for at billederne fylder containeren uden at blive beskåret */
 }
 
@@ -281,13 +281,13 @@ p div {
 .billeder_4 {
   display: flex;
   flex-wrap: wrap; /* Tillader billederne at bryde linjen */
-  justify-content: space-evenly; /* Jævnt fordelt billeder */
-  gap: 10px; /* Afstand mellem billederne */
+  justify-content: space-evenly;
+  gap: 10px;
 }
 
 .billeder_4 img {
-  width: 45%; /* Billederne fylder 45% af containerens bredde */
-  height: auto; /* Beholder billedets proportioner */
+  width: 45%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -375,14 +375,14 @@ a:hover {
   }
 
   .billede_2 {
-    display: flex; /* Brug Flexbox for at arrangere billederne horisontalt */
-    justify-content: space-between; /* Placer billederne med lige afstand imellem */
-    gap: 10px; /* Afstand mellem billederne */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
   }
 
   .billede_2 img {
-    width: 50%; /* Sæt billedernes bredde til 48% af containerens bredde */
-    height: auto; /* Bevar proportionerne af billederne */
+    width: 50%;
+    height: auto;
   }
 
   .lodret {
@@ -390,14 +390,14 @@ a:hover {
     writing-mode: vertical-rl; /* Ændrer tekstretningen til lodret fra højre mod venstre */
     transform: rotate(180deg); /* Roterer teksten for at gøre den læselig fra top til bund */
     font-size: 1.5rem;
-    color: #5c4033; /* Juster tekststørrelse */
+    color: #5c4033;
     padding: 20px;
     position: absolute; /* Placering af teksten */
     left: 80px; /* Juster tekstens placering fra venstre kant */
     top: 50%; /* Placerer teksten centralt i forhold til højden */
     transform-origin: top left; /* Sørger for at rotationen starter fra toppen til venstre */
     white-space: nowrap;
-    display: flex; /* Brug flexbox til at organisere teksten */
+    display: flex; /* Organisere teksten */
     flex-direction: column; /* Placer tekstlinjerne vertikalt */
     align-items: flex-start;
   }
@@ -413,9 +413,9 @@ a:hover {
   }
 
   .bjerg {
-    width: 100%; /* Start med fuld bredde */
-    height: auto; /* Behold proportionaliteten */
-    display: block; /* Sørger for at billedet opfører sig som en blok */
+    width: 100%;
+    height: auto;
+    display: block;
     margin: 0 auto; /* Centrerer billedet horisontalt */
     transform: scale(1.2); /* Gør billedet 120% af sin oprindelige størrelse */
     transform-origin: center;
